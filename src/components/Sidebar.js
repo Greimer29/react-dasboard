@@ -1,17 +1,27 @@
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 
 const Sidebar = function(){
     return(
         <div className="sidebar">
             <ul>
                 <li>
-                    <Link to="/">Inicio</Link>
+                    <NavLink to="/" exact activeClassName="active" className="text-dark rounded py-2 w-100 d-line-block px-3"> 
+                        <FaIcons.FaHome className="me-2"/> 
+                        Inicio
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/sales">Ventas</Link>
+                    <NavLink to="/sales" exact activeClassName="active" className="text-dark rounded py-2 w-100 d-line-block px-3">
+                        <FaIcons.FaRegChartBar className="me-2"/>
+                        Ventas
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/clients">Clientes</Link>
+                    <NavLink to="/clients" exact activeClassName="active" className="text-dark rounded py-2 w-100 d-line-block px-3">
+                        <FaIcons.FaUserFriends className="me-2"/> 
+                        Clientes
+                    </NavLink>
                 </li>
             </ul>
         </div>
